@@ -1,0 +1,153 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f2f5;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+main {
+  margin-top: 200px !important;
+  display: flex;
+  justify-content: space-between;
+}
+main .section-image {
+  padding-right: 40px;
+  width: 40%;
+}
+main .section-image .logo {
+  height: 100px;
+  margin-left: -30px;
+}
+main .section-image .logo img {
+  height: 100%;
+}
+main .section-image .description {
+  color: #1c1e21;
+  font-weight: 400;
+  font-size: 28px;
+}
+main .section-login {
+  width: 40%;
+}
+main .section-login .card {
+  border-radius: 6px;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 12px 6px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0 0 12px 6px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 0 12px 6px rgba(34, 60, 80, 0.2);
+}
+main .section-login .card .forgot-password {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #1877f2;
+}
+main .section-login .card .forgot-password:hover {
+  text-decoration: underline;
+}
+main .section-login .card .full-width {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 12px;
+}
+main .section-login .card .full-width input {
+  border: none;
+  border: 1px solid #dddfe2;
+  padding-left: 15px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+main .section-login .card .full-width input::placeholder {
+  font-size: 18px;
+}
+main .section-login .card .full-width input:focus {
+  outline: none;
+  border-color: #1b74e4;
+}
+main .section-login .card .full-width input:focus::placeholder {
+  opacity: 0.5;
+}
+main .section-login .card .full-width .btn-login {
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 6px;
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+main .section-login .card .full-width .create-account {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 0 auto;
+  border-radius: 6px;
+  width: 50%;
+  background-color: #42b72a;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .section-login .card .full-width > * {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+main .section-login .card hr {
+  margin: 18px 0;
+  border: 1px solid #dadde1;
+}
+main .section-login .page-link {
+  text-align: center;
+  margin-top: 18px;
+  color: #1c1e21;
+}
+main .section-login .page-link a {
+  color: #1c1e21;
+  text-decoration: none;
+  font-weight: 600;
+}
+main .section-login .page-link a:hover {
+  text-decoration: underline;
+}
+footer {
+  margin-top: 200px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+footer hr {
+  margin-bottom: 12px;
+  border: 1px solid #dddfe2;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer ul li {
+  list-style-type: none;
+  margin-right: 12px;
+  color: #737373;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+footer ul li a {
+  color: #737373;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}

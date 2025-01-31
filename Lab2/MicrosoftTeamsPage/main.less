@@ -1,0 +1,157 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+header {
+  nav {
+    justify-content: space-between;
+    height: 56px;
+
+    .logo {
+      height: 25px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .home-link {
+      align-items: center;
+
+      li {
+        list-style: none;
+        margin-left: 24px;
+
+        &:nth-child(2) {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #262626;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .secondary-links {
+      align-items: center;
+
+      a {
+        color: #4b53bc;
+      }
+
+      .btn-signin {
+        border-radius: 3px;
+        padding: 6px 12px;
+        margin-left: 12px;
+        border: 1px solid #4b53bc;
+      }
+    }
+  }
+
+  .alert {
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    background-color: #5b5fc7;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 400;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      .link {
+        margin: 0 12px;
+
+        &:hover {
+          text-decoration: underline;
+          .arrow {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  min-height: 895px;
+  position: relative;
+
+  .bg-image {
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .main-section {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1020;
+
+    .card {
+      width: calc(500% / 12);
+      padding: 48px;
+
+      > * {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        font-size: 50px;
+        font-weight: 600;
+      }
+
+      .link-group {
+        column-gap: 24px;
+
+        .btn-primary {
+          border-radius: 2px;
+          background-color: #5d5bd4;
+          color: #fff;
+          padding: 10px 12px;
+          text-decoration: none;
+
+          &:hover {
+          }
+        }
+        .btn-secondary {
+          border-radius: 2px;
+          background-color: #fff;
+          color: #5d5bd4;
+          border: 2px solid #5d5bd4;
+          padding: 10px 12px;
+          text-decoration: none;
+
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+}
