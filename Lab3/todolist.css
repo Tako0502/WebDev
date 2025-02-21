@@ -5,32 +5,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   background-color: #000;
   height: 50px;
   color: #ffffff99;
   padding: 20px 30px;
 }
+
 .container {
   margin: 0 auto;
   width: 1140px;
   padding: 60px;
 }
-.control-container{
+
+.control-container {
   display: flex;
   justify-content: space-between;
 }
+
 .task-title {
   height: 45px;
   width: 900px;
   padding: 15px;
   font-size: 30px;
 }
+
 #add-btn {
   height: 45px;
   width: 100px;
   font-size: 30px;
 }
+
 .tosolist-item {
   display: flex;
   align-items: center;
@@ -40,10 +46,26 @@ header {
   padding: 15px;
   margin-bottom: 15px;
 }
+
 .tosolist-item:first-child {
   margin-top: 30px;
 }
+
 .tosolist-item img {
   height: 30px;
   cursor: pointer;
+}
+
+.tosolist-item p {
+  position: relative;
+}
+
+.tosolist-item .over-line::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  top: 50%;
+  transform: translateY(-50%);
 }

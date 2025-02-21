@@ -1,0 +1,18 @@
+
+  <div class="product-container">
+    <div class="product-card" *ngFor="let product of products">
+      <img [src]="product.image" alt="Product Image" class="product-image">
+      <div class="product-details">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="product-rating">
+          <span class="rating">Rating: {{ product.rating }}</span>
+          <a [href]="product.storeLink" class="store-link" target="_blank">View on Store</a>
+        </div>
+        <div class="button-container">
+          <button class="share-button" (click)="shareProduct(product.storeLink, product.name)">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

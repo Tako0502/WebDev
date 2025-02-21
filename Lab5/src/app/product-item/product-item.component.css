@@ -1,0 +1,15 @@
+.product-item-container{
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
+
+
+.product-item-container .button-group {
+  display: flex;
+  column-gap: 12px;
+}
+
+button{
+  cursor: pointer;
+}

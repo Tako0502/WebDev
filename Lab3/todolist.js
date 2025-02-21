@@ -25,15 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   addBtn.addEventListener("click", () => {
+    if (input.value == "") {
+      alert("Please enter a task");
+      return;
+    }
     const title = input.value,
-      li = createListItem();
+      li = createListItem(),
+      paragraf = li.querySelector("p");
     console.log(li);
     console.log(list);
-    li.querySelector("p").innerText = title;
+    const chekcBox = li.querySelector("input[type=checkbox]");
+    if (chekcBox) {
+      chekcBox.addEventListener("click", function () {
+        paragraf.classList.toggle("over-line");
+      });
+    }
+
+    paragraf.innerText = title;
     li.querySelector("img").addEventListener("click", function () {
       list.removeChild(this.parentNode);
     });
 
     list.appendChild(li);
+    input.value = "";
   });
 });

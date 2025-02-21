@@ -1,0 +1,8 @@
+<div class="product-item-container">
+  <p>{{ product.name }}</p>
+  <p>Likes: {{ product.likes }}</p>
+  <div class="button-group">
+    <button (click)="like(product.id)">Like</button>
+    <button (click)="remove(product.id)">Remove</button>
+  </div>
+</div>
