@@ -1,0 +1,40 @@
+<div class="products-container">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="image-gallery">
+      <div class="discount-badge">5% Б</div>
+      <img [src]="product.image" [alt]="product.name">
+      <div class="additional-images" *ngIf="product.images && product.images.length > 1">
+        <img *ngFor="let img of product.images" [src]="img" [alt]="product.name" 
+             (click)="product.image = img">
+      </div>
+    </div>
+    
+    <h2>{{ product.name }}</h2>
+    <p class="description">{{ product.description }}</p>
+    <div class="rating">
+      <span>★★★★★</span>
+      <span>({{ product.reviewCount || 0 }} отзывов)</span>
+    </div>
+
+    <div class="price-block">
+      <div class="regular-price">
+        <span class="price-label">Цена</span>
+        <span class="price-amount">{{ product.price | number }} ₸</span>
+      </div>
+      <div class="installment-price">
+        <span class="price-label">В рассрочку</span>
+        <span class="price-amount">{{ product.installmentPrice | number }} ₸</span>
+        <span class="installment-period">x24</span>
+      </div>
+    </div>
+    
+    <div class="share-buttons">
+      <button (click)="share(product, 'whatsapp')">
+        Share on WhatsApp
+      </button>
+      <button (click)="share(product, 'telegram')">
+        Share on Telegram
+      </button>
+    </div>
+  </div>
+</div> 
