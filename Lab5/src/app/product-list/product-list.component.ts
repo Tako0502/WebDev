@@ -15,6 +15,6 @@ import { Product } from "../product.model";
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  @Input() product!: Product;
   @Input() category!: Category;
 }
+// 

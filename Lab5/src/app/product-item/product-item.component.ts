@@ -10,13 +10,11 @@ import {DBService} from "../dbservices";
 })
 export class ProductItemComponent {
   @Input() product!: Product;
-
   constructor(private dbService : DBService) {}
-
   like(productId:number) {
     this.dbService.likeProduct(productId);
+    console.log(this.product);
   }
-
   remove(productId:number) {
     this.dbService.removeProduct(productId);
   }

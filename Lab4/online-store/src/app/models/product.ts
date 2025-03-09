@@ -5,7 +5,7 @@ export interface Product {
   rating: number;
   image: string;
   kaspiLink: string;
-  images?: string[];  // Optional array for image gallery
+  images?: string[];  
   price: number;
   installmentPrice: number;
   reviewCount?: number;
