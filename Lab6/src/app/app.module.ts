@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
-// Add these component imports
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AlbumsComponent } from './components/albums/albums.component';

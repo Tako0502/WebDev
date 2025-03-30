@@ -67,8 +67,8 @@ export class AlbumsComponent implements OnInit {
   ngOnInit(): void {
     this.albumsService.getAlbums().subscribe(
       albums => {
-        this.albums = albums;
         console.log(albums);
+        this.albums = albums;
       }
     );
   }
