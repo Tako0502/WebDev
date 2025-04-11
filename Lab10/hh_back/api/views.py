@@ -19,6 +19,7 @@ def category_detail(request, pk=None):
         })
 
 
+
 def category_products(request, pk=None):
     try:
         category = Category.objects.get(id=pk)
