@@ -9,7 +9,7 @@ def category_list(request):
     return JsonResponse(categories_json, safe=False)
 
 
-def category_detail(request, pk=None):
+def category_detail(request, pk):
     try:
         category = Category.objects.get(id=pk)
         return JsonResponse(category.to_json())
@@ -19,7 +19,7 @@ def category_detail(request, pk=None):
         })
 
 
-def category_products(request, pk=None):
+def category_products(request, pk):
     try:
         category = Category.objects.get(id=pk)
         products = Product.objects.filter(category=category)
@@ -33,6 +33,7 @@ def category_products(request, pk=None):
 
 def product_list(request):
     products = Product.objects.all()
+    print(products)
     products_json = [product.to_json() for product in products]
     return JsonResponse(products_json, safe=False)
 
@@ -46,3 +47,6 @@ def product_detail(request, pk=None):
             'error': str(e)
         })
 
+def getCategories(request):
+    categories = Category.objects.all()
+    category_List = [c]

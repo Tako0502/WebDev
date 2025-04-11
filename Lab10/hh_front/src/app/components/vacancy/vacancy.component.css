@@ -1,0 +1,13 @@
+.list-group-item {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-success {
+  font-weight: bold;
+}
+
+small {
+  color: #6c757d;
+} 

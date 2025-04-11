@@ -13,10 +13,6 @@ class Category(models.Model):
             'name': self.name,
         }
 
-    class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
-
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
@@ -39,6 +35,3 @@ class Product(models.Model):
             'is_active': self.is_active
         }
 
-    class Meta:
-        verbose_name = "Product"
-        verbose_name_plural = "Products"
