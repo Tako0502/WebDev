@@ -14,21 +14,16 @@ def category_detail(request, pk=None):
         category = Category.objects.get(id=pk)
         return JsonResponse(category.to_json())
     except Category.DoesNotExist as e:
-        return JsonResponse({
-            'error': str(e)
-        })
+        return JsonResponse({"error": str(e)})
 
 
 def category_products(request, pk=None):
-    try:
-        category = Category.objects.get(id=pk)
-        products = Product.objects.filter(category=category)
-        products_json = [product.to_json() for product in products]
-        return JsonResponse(products_json, safe=False)
-    except Category.DoesNotExist as e:
-        return JsonResponse({
-            'error': str(e)
-        })
+    category = Category.objects.get(id=pk)
+    if not category:
+        return JsonResponse({"error": "ccategory not found"})
+    products = Product.objects.filter(category=category)
+    products_json = [product.to_json() for product in products]
+    return JsonResponse(products_json,safe=False)
 
 
 def product_list(request):
@@ -42,9 +37,7 @@ def product_detail(request, pk=None):
         product = Product.objects.get(id=pk)
         return JsonResponse(product.to_json())
     except Product.DoesNotExist as e:
-        return JsonResponse({
-            'error': str(e)
-        })
+        return JsonResponse({"error": str(e)})
 
 
 def company_list(request):
@@ -58,9 +51,7 @@ def company_detail(request, pk=None):
         company = Company.objects.get(id=pk)
         return JsonResponse(company.to_json())
     except Company.DoesNotExist as e:
-        return JsonResponse({
-            'error': str(e)
-        })
+        return JsonResponse({"error": str(e)})
 
 
 def company_vacancies(request, pk=None):
@@ -70,9 +61,7 @@ def company_vacancies(request, pk=None):
         vacancies_json = [vacancy.to_json() for vacancy in vacancies]
         return JsonResponse(vacancies_json, safe=False)
     except Company.DoesNotExist as e:
-        return JsonResponse({
-            'error': str(e)
-        })
+        return JsonResponse({"error": str(e)})
 
 
 def vacancy_list(request):
@@ -86,9 +75,7 @@ def vacancy_detail(request, pk=None):
         vacancy = Vacancy.objects.get(id=pk)
         return JsonResponse(vacancy.to_json())
     except Vacancy.DoesNotExist as e:
-        return JsonResponse({
-            'error': str(e)
-        })
+        return JsonResponse({"error": str(e)})
 
 
 def vacancies_top10(request):
